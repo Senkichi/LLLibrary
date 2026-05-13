@@ -1,0 +1,14 @@
+{
+  "name": "lllibrary-charts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Headless SVG chart generation for LLLibrary wiki pages and README.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@observablehq/plot": "^0.6.16",
+    "jsdom": "^25.0.1"
+  }
+}
