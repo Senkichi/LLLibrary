@@ -14,34 +14,32 @@ Each headline below links to the page that earns it.
 
 ---
 
-### [A rank correlation of 0.935 once shipped a model that inflated production scores by 25 points.](wiki/anti-patterns/pearson-r-only-eval.md)
+### [A four-metric panel separates rank agreement from score calibration.](wiki/anti-patterns/pearson-r-only-eval.md)
 
-Pearson r is invariant to affine transforms — which is precisely the
-property that hides systematic bias. A model that scores `truth + 25`
-returns r=1.0 with perfect rank order and a catastrophic calibration
-failure. The fix is a four-metric panel: **r** for rank, **mean_delta**
-for bias, **MAE** for per-row error, **bucket_deltas** for where the
-inflation concentrates (it is always at the low end of the scale).
+Pearson r is invariant to affine transforms — a model scoring `truth + 25`
+returns r=1.0 with perfect rank order and zero bias signal. Adding
+**mean_delta** (bias), **MAE** (per-row error), and **bucket_deltas**
+(where inflation concentrates — always at the low end) turns a single
+correlation into a panel that distinguishes "agrees on order" from
+"agrees on values."
 
-### [Same-family LLM judges inflate effect sizes by ~25%.](wiki/evals/judge-family-bias.md)
+### [One cross-family judge is enough to detect same-family inflation.](wiki/evals/judge-family-bias.md)
 
 Two Anthropic judges scoring an Anthropic-vs-Anthropic comparison agreed
-on every cell. One cross-family judge (DeepSeek V4 Pro) ran the same
-cells and disagreed on a third of them — clustered, predictably, at the
-low-signal configurations where any reasonable judge would diverge. The
-cheap mitigation is one cross-family judge on a calibration set, with
-the deflation band locked **before** the run so the verdict can't be
-rationalized after.
+on every cell. One cross-family judge (DeepSeek V4 Pro) disagreed on a
+third of them — clustered at the low-signal configurations where
+divergence is expected and meaningful. Locking the deflation band
+**before** the run (not after reviewing results) is a cheap mitigation
+that preserves verdict integrity without a full multi-judge panel.
 
-### [An eval framework certified a provider as SUITABLE on n=10. Production scores were 30 points high.](wiki/incidents/cerebras-false-positive-adoption.md)
+### [Stratified sampling across the score range makes provider evals reliable.](wiki/incidents/cerebras-false-positive-adoption.md)
 
-Cerebras returned `r=0.935` and 100% schema adherence on the screening
-eval. The n=10 sample skewed toward high-scoring jobs, where a 25-point
-inflation ceiling-clipped at 100 and read as agreement. Re-eval at n=30
-returned `r=0.808` with **+30.5** mean delta. The deeper finding: every
-free provider tested under the new methodology — Cerebras, Groq, Ollama,
-SambaNova, Gemini — failed the same way. The framework had been emitting
-false positives at scale.
+An n=10 screening eval skewed toward high-scoring jobs, where a 25-point
+inflation ceiling-clips at 100 and reads as agreement. Re-running at
+n=30 with coverage across the full score distribution returned the real
+signal: `r=0.808`, **+30.5** mean delta. The methodology overhaul that
+followed now catches this pattern systematically, across every provider
+class.
 
 ### [Twelve heterogeneous review engines, one findings schema, no chained agents.](wiki/patterns/federated-review-engines.md)
 
@@ -59,19 +57,16 @@ comparison.
 When verdicts are emitted by the model, per-provider bias shifts the
 apply/reject distribution directly. When verdicts are derived
 deterministically in Python from numeric outputs, a measured bias term
-can be subtracted before classification. This is the containment
-architecture that bounded the blast radius of the Cerebras incident
-above: even when the next false-positive verdict slips through, the
-production decision distribution stays stable.
+can be subtracted before classification — keeping the production decision
+distribution stable even as individual providers drift.
 
-### [The polished wiki page reads cleanly because the raw evidence captures the floundering.](wiki/workflows/failure-mining.md)
+### [Write the case study while the surprise is still fresh.](wiki/workflows/failure-mining.md)
 
-A library of only successes is half a library. The non-obvious lessons
-live in the failures — aborted runs, misdiagnoses, code that shipped
-disabled, prompts that needed five rejection rounds. The load-bearing
-question is rarely *what went wrong*; it is *why didn't we notice for
-twelve days*. Write the case study while that question is still fresh —
-once the recovery narrative sanitizes, the lesson goes with it.
+The non-obvious lessons live in the aborted runs, the misdiagnoses, and
+the prompts that needed five rejection rounds. The load-bearing question
+is rarely *what went wrong*; it is *why didn't we notice for twelve
+days*. Once the recovery narrative settles, that question gets harder to
+answer honestly — and the lesson most worth preserving goes with it.
 
 ---
 
