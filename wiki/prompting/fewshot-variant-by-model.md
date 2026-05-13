@@ -11,7 +11,7 @@ provenance: "[job-cannon](https://github.com/Senkichi/job-cannon)"
 
 Different models respond to different prompting techniques **differently**. There is no single "best prompt variant" across a multi-provider cascade — each provider needs its own optimal variant.
 
-![Slope chart of Pearson r against Opus baseline for four prompt variants on Cerebras and Ollama; chain-of-thought ascends from 0.699 to 0.868 while fewshot-distribution descends from 0.935 to 0.836](../../assets/charts/fewshot-variant-by-model.svg)
+<img src="../../assets/charts/fewshot-variant-by-model.svg" alt="Slope chart of Pearson r against Opus baseline for four prompt variants on Cerebras and Ollama; chain-of-thought ascends from 0.699 to 0.868 while fewshot-distribution descends from 0.935 to 0.836" width="615">
 
 *Slope chart: each line is one prompt variant. Left endpoint is the variant's Pearson r against an Opus baseline on Cerebras; right endpoint is the same against Ollama. The crossing of `chain-of-thought` (Cerebras's worst variant) past `fewshot-distribution` (Cerebras's best) is the rank inversion.*
 
