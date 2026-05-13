@@ -65,7 +65,7 @@ never measurable in the first place.
 
 ### [Pipeline configs tuned on one model generation don't port to the next.](wiki/anti-patterns/configs-port-across-generations.md)
 
-<img src="assets/charts/configs-port-across-generations.svg" alt="Mean win rate by max_debate_rounds on Opus 4.7, showing a U-shape with the uncanny valley at 3 rounds" width="465">
+<img src="assets/charts/configs-port-across-generations.svg" alt="Mean win rate by max_debate_rounds on Opus 4.7, showing a U-shape with the uncanny valley at 3 rounds" width="585">
 
 *Mean win rate per `max_debate_rounds` setting against the three other
 configs on Opus 4.7. Gray dots are individual pairwise win rates; the
@@ -81,7 +81,7 @@ experiment, not the assumption.
 
 ### [Each provider in a multi-provider cascade needs its own optimal prompt variant.](wiki/prompting/fewshot-variant-by-model.md)
 
-<img src="assets/charts/fewshot-variant-by-model.svg" alt="Slope chart of Pearson r against Opus baseline for four prompt variants on Cerebras and Ollama; chain-of-thought ascends from 0.699 to 0.868 while fewshot-distribution descends from 0.935 to 0.836" width="615">
+<img src="assets/charts/fewshot-variant-by-model.svg" alt="Slope chart of Pearson r against Opus baseline for four prompt variants on Cerebras and Ollama; chain-of-thought ascends from 0.699 to 0.868 while fewshot-distribution descends from 0.935 to 0.836" width="770">
 
 *Slope chart: each line is one prompt variant. Left endpoint is the
 variant's Pearson r against an Opus baseline on Cerebras; right
