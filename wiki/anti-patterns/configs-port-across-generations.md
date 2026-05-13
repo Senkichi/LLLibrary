@@ -11,6 +11,10 @@ provenance: "[langgraph-agents](https://github.com/Senkichi/langgraph-agents)"
 
 A pipeline configuration that's optimal on model version N is not necessarily optimal on N+1. **Re-tune when the model changes.**
 
+![Mean win rate by max_debate_rounds on Opus 4.7, showing a U-shape with the uncanny valley at 3 rounds](../../assets/charts/configs-port-across-generations.svg)
+
+*Mean win rate per `max_debate_rounds` setting against the three other configs on Opus 4.7. Gray dots are individual pairwise win rates; the dark line is the mean. The U-shape with `3rnd` at the bottom is the uncanny valley — winning the config that dominated on Opus 4.6 hands you the worst config on Opus 4.7.*
+
 ## The specific data
 
 [langgraph-agents](https://github.com/Senkichi/langgraph-agents) Experiment 001 (2026-04-18, Opus 4.6) found that `max_debate_rounds=3` produced the strongest B-homo-opus configuration on 3 complex tasks (93.5% win rate).
