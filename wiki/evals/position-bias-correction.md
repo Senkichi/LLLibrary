@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [evals, judges, bias]
-provenance: [langgraph-agents](https://github.com/Senkichi/langgraph-agents)
+provenance: "[langgraph-agents](https://github.com/Senkichi/langgraph-agents)"
 ---
 
 # Position-bias correction in pairwise preference eval

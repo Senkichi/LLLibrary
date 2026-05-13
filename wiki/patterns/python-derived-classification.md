@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [scoring, validation, determinism]
-provenance: [job-cannon](https://github.com/Senkichi/job-cannon), [[projects/resume-engine]]
+provenance: "[job-cannon](https://github.com/Senkichi/job-cannon), [[projects/resume-engine]]"
 ---
 
 # Let the LLM emit ordinal scores; derive the verdict in code

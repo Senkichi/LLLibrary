@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [evals, langgraph-agents]
-provenance: [langgraph-agents](https://github.com/Senkichi/langgraph-agents)
+provenance: "[langgraph-agents](https://github.com/Senkichi/langgraph-agents)"
 ---
 
 # Dual-pipeline baseline eval (2026-04-18)

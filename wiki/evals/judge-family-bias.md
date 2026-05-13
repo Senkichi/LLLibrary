@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [evals, bias, judges]
-provenance: [langgraph-agents](https://github.com/Senkichi/langgraph-agents)
+provenance: "[langgraph-agents](https://github.com/Senkichi/langgraph-agents)"
 ---
 
 # Judge-family bias in LLM-as-judge pairwise eval

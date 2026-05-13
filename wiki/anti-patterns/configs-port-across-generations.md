@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [evals, models, anti-pattern]
-provenance: [langgraph-agents](https://github.com/Senkichi/langgraph-agents)
+provenance: "[langgraph-agents](https://github.com/Senkichi/langgraph-agents)"
 ---
 
 # Anti-pattern: assuming pipeline configs port across model generations

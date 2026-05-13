@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [incident, evals, providers]
-provenance: [job-cannon](https://github.com/Senkichi/job-cannon)
+provenance: "[job-cannon](https://github.com/Senkichi/job-cannon)"
 ---
 
 # Incident — Cerebras adopted SUITABLE on n=10, +25pt inflation in production

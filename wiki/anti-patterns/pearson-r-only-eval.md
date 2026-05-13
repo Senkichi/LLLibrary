@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [evals, anti-pattern, bias]
-provenance: [job-cannon](https://github.com/Senkichi/job-cannon)
+provenance: "[job-cannon](https://github.com/Senkichi/job-cannon)"
 ---
 
 # Anti-pattern: evaluating model quality with Pearson r alone

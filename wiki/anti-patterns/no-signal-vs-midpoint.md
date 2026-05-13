@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [rubrics, evals, anti-pattern]
-provenance: [job-cannon](https://github.com/Senkichi/job-cannon)
+provenance: "[job-cannon](https://github.com/Senkichi/job-cannon)"
 ---
 
 # Anti-pattern: collapsing "no signal" into the midpoint

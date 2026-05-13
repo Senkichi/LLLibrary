@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [incident, smoke-tests, langgraph-agents]
-provenance: [langgraph-agents](https://github.com/Senkichi/langgraph-agents)
+provenance: "[langgraph-agents](https://github.com/Senkichi/langgraph-agents)"
 ---
 
 # Incident — Variant B was not executable on Windows when 001 baseline was published

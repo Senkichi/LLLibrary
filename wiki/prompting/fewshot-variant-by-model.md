@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [prompting, providers, models]
-provenance: [job-cannon](https://github.com/Senkichi/job-cannon)
+provenance: "[job-cannon](https://github.com/Senkichi/job-cannon)"
 ---
 
 # Prompt-engineering variants are model-specific

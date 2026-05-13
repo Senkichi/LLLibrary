@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [agent-architecture, code-review, schema]
-provenance: [[projects/nit-pick-supreme]]
+provenance: "[[projects/nit-pick-supreme]]"
 ---
 
 # Federated review engines with unified findings schema

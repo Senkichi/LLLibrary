@@ -4,7 +4,7 @@ created: 2026-05-11
 last-reviewed: 2026-05-11
 last-modified: 2026-05-12
 tags: [meta, workflows, learning]
-provenance: synthesized from postmortem corpus across [langgraph-agents](https://github.com/Senkichi/langgraph-agents), [job-cannon](https://github.com/Senkichi/job-cannon), [[projects/resume-engine]]
+provenance: "synthesized from postmortem corpus across [langgraph-agents](https://github.com/Senkichi/langgraph-agents), [job-cannon](https://github.com/Senkichi/job-cannon), [[projects/resume-engine]]"
 ---
 
 # Failure mining — extracting lessons from aborted runs and flailing
