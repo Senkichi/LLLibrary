@@ -20,7 +20,7 @@ A pure Python function (`job_finder.db._classification.derive_classification`) m
 ## Why this shape wins
 
 - **The verdict is testable.** Pure functions of pure inputs have unit tests. LLM-emitted verdicts do not.
-- **The verdict is changeable without re-spending compute.** Want to make `apply` thresholds stricter? Edit the Python. The 6 sub-scores in the DB are immutable history — they don't need re-scoring.
+- **The verdict is changeable without re-running the LLM.** Want to make `apply` thresholds stricter? Edit the Python. The 6 sub-scores in the DB are immutable history — they don't need re-scoring.
 - **Provider swaps don't change the verdict distribution.** When you cascade Ollama → Groq → Cerebras → Anthropic, each provider may inflate by +20-35 points (see [[anti-patterns/pearson-r-only-eval]]). If the verdict comes from the LLM, your `apply` rate spikes when the cascade hits a different provider. If the verdict comes from Python over normalized sub-scores, you can subtract a per-provider bias before deriving the verdict.
 - **Sub-scores are a richer signal than a single label.** Even when the verdict matches, "rejected because seniority mismatch" is a different action than "rejected because comp mismatch". Verdict-only output discards that information.
 - **You can ensemble.** Run two models, average the sub-scores, then derive the verdict. Verdict-only ensembling requires majority-vote schemes that are noisier and less informative.

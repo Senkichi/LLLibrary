@@ -11,7 +11,7 @@ provenance: [langgraph-agents](https://github.com/Senkichi/langgraph-agents)
 
 ## What happened
 
-[langgraph-agents](https://github.com/Senkichi/langgraph-agents) published the 001 baseline eval (2026-04-18, 10 configs × 5 tasks = 50 runs, $58.71 spend) with a victorious finding: **Variant B beats Variant A by 15 points on complex tasks; B-homo-opus 93.5% win rate.**
+[langgraph-agents](https://github.com/Senkichi/langgraph-agents) published the 001 baseline eval (2026-04-18, 10 configs × 5 tasks = 50 runs) with a victorious finding: **Variant B beats Variant A by 15 points on complex tasks; B-homo-opus 93.5% win rate.**
 
 When Experiment 002 launched (2026-04-23) and tried to actually use Variant B again on Windows, it crashed before the first debate turn finished. Two pre-existing blockers were discovered:
 

@@ -14,7 +14,7 @@ Flat sitemap of all pages. For themed navigation, see `wiki/index.md`.
 
 - `wiki/evals/judge-family-bias.md` — Same-family LLM judges inflate effect magnitudes; one cross-family judge on a calibration set surfaces the deflation factor.
 - `wiki/evals/position-bias-correction.md` — Pairwise LLM judges have measurable order bias; double-call with swapped orderings, tie out same-position votes.
-- `wiki/evals/baseline-eval-2026-04-18.md` — First full debate-eval run: 10 configs × 5 tasks, $58.71 spend, with explicit limits and supersession chain.
+- `wiki/evals/baseline-eval-2026-04-18.md` — First full debate-eval run: 10 configs × 5 tasks, with explicit limits and supersession chain.
 
 ## Anti-patterns
 

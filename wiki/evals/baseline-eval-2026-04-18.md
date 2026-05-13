@@ -9,7 +9,7 @@ provenance: [langgraph-agents](https://github.com/Senkichi/langgraph-agents)
 
 # Dual-pipeline baseline eval (2026-04-18)
 
-First full eval run of [langgraph-agents](https://github.com/Senkichi/langgraph-agents): **10 configurations × 5 tasks = 50 runs, parallel=3**, no API fallback (local Claude Code subscription only). Total spend $58.71. Wall time 127 min end-to-end. 50/50 successful, 0 errors.
+First full eval run of [langgraph-agents](https://github.com/Senkichi/langgraph-agents): **10 configurations × 5 tasks = 50 runs, parallel=3**, no API fallback (local Claude Code subscription only). Wall time 127 min end-to-end. 50/50 successful, 0 errors.
 
 ## Configurations
 
@@ -43,8 +43,8 @@ The `opus`/`sonnet`/`haiku` aliases at this point resolved to claude-opus-4-6 (a
 | Finding | Detail |
 |---------|--------|
 | **B beats A by 15 points on complex tasks** | 57.3% vs 42.7% on the 3 long tasks |
-| **B-homo-opus wins 93.5%** | Highest cost ($3.40/run avg) |
-| **A-het-opus-sonnet is Pareto winner** | 75% win rate, $1.57/run |
+| **B-homo-opus wins 93.5%** | Highest cost config |
+| **A-het-opus-sonnet is Pareto winner** | 75% win rate, lowest cost among high-performing configs |
 | **Haiku is not viable solo** | Only works as weaker half of heterogeneous pair |
 | **Variant B costs ~2× Variant A** | Stable ratio across opus/sonnet/haiku/het |
 | **Most B debates hit `max_rounds`** | 17/25 (room to explore higher round caps) |
